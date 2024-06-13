@@ -201,16 +201,16 @@ impl<'a> Pencil<'a> {
         self.canvas.dimension() - self.origin
     }
 
-    pub fn foreground(&self) -> &Color {
-        &self.foreground
+    pub fn foreground(&self) -> Color {
+        self.foreground
     }
 
-    pub fn background(&self) -> &Color {
-        &self.background
+    pub fn background(&self) -> Color {
+        self.background
     }
 
-    pub fn style(&self) -> &Style {
-        &self.style
+    pub fn style(&self) -> Style {
+        self.style
     }
 
     pub fn set_origin(&mut self, position: Vec2) -> &mut Pencil<'a> {

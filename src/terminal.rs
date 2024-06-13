@@ -158,8 +158,8 @@ impl Canvas {
         }
     }
 
-    pub fn default_element(&self) -> &VisualElement {
-        &self.default_element
+    pub fn default_element(&self) -> VisualElement {
+        self.default_element
     }
 
     /// Sets the current [`Canvas`]'s default element, to which every cell is reset when

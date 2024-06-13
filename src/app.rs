@@ -64,8 +64,8 @@ impl State {
         &self.keyboard
     }
 
-    pub fn dt(&self) -> &time::Duration {
-        &self.dt
+    pub fn dt(&self) -> time::Duration {
+        self.dt
     }
 
     pub fn step(&self) -> usize {
