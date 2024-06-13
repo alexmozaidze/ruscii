@@ -306,7 +306,7 @@ impl Default for Keyboard {
 
 impl Keyboard {
     /// Retrieves all the [`KeyEvent`]s that were fired during the previous frame.
-    pub fn last_key_events(&self) -> &Vec<KeyEvent> {
+    pub fn last_key_events(&self) -> &[KeyEvent] {
         &self.last_key_events
     }
 
@@ -319,7 +319,7 @@ impl Keyboard {
 
     /// Clears the [`KeyEvent`]s from the last frame and consumes new ones from the event
     /// [`Receiver`].
-    pub fn consume_key_events(&mut self) -> &Vec<KeyEvent> {
+    pub fn consume_key_events(&mut self) -> &[KeyEvent] {
         self.last_key_events.clear();
         let events = self.event_receiver.try_iter().collect::<Vec<_>>();
 

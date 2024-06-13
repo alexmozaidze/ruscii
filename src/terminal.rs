@@ -236,7 +236,7 @@ impl Canvas {
     }
 
     /// Returns a reference to all the data the [`Canvas`] holds.
-    pub fn data(&self) -> &Vec<VisualElement> {
+    pub fn data(&self) -> &[VisualElement] {
         &self.data
     }
 }
